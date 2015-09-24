@@ -15,10 +15,31 @@
     <!-- Custom styles for this template -->
     <link href="index.css" rel="stylesheet">
 
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+<script>
+    
+    function displayFormMentor(){
+        document.getElementById("mentee").style.display = "none";
+        document.getElementById("mentor").style.display = "none";
+        document.getElementById("coordinator").style.display = "none";
+        document.getElementById("mentor").style.display = "inline";
+    }
+    
+    function displayFormMentee(){
+        document.getElementById("mentee").style.display = "none";
+        document.getElementById("mentor").style.display = "none";
+        document.getElementById("coordinator").style.display = "none";
+        document.getElementById("mentee").style.display = "inline";
+    }
+    
+    function displayFormCoordinator(){
+        document.getElementById("mentee").style.display = "none";
+        document.getElementById("mentor").style.display = "none";
+        document.getElementById("coordinator").style.display = "none";
+        document.getElementById("coordinator").style.display = "inline";
+    }
 
+      
+      </script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
 <!-- Optional theme -->
@@ -42,9 +63,9 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li><a href="mentor.html">Sign up a Mentor</a></li>
-            <li><a href="student.html">Sign up a Mentee</a></li>
-            <li><a href="coordinator.html">Sign up a Coordinator</a></li>
+            <li><a onclick="displayFormMentor()">Sign up a Mentor</a></li>
+            <li><a onclick="displayFormMentee()">Sign up a Mentee</a></li>
+            <li><a onclick="displayFormCoordinator()">Sign up a Coordinator</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -52,12 +73,16 @@
 
     <!-- Begin page content -->
     <div class="container">
-      
-    </div>
-
+<!--        mentor-->
+      <iframe id="mentor" src="https://docs.google.com/forms/d/17uvdpsiXOmE3_FNqXCj5iDkPsKzrRTExz4p3GfXTgCw/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+    
+<!--      mentee-->
+      <iframe id="mentee" src="https://docs.google.com/forms/d/1JzNOS8kMWqZ2Po_aW6Ro8pcLAq-H7Z-G1B2m5Pv1Q-I/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0" style="display:none;">Loading...</iframe>
+<!--      coordinator-->
+      <iframe id="coordinator" src="https://docs.google.com/forms/d/18DEitLQE_y0a1eFmT6s1Bp5LJMYnuW60t-Yl81o0a4I/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0" style="display:none;">Loading...</iframe>
+</div>
     <footer class="footer">
       <div class="container">
-        <p class="text-muted">Place sticky footer content here.</p>
       </div>
     </footer>
 
